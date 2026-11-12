@@ -1,0 +1,15 @@
+// Self-contained & Capacitor compatible Android Project Configuration
+include ':app'
+
+if (new File(rootDir, 'capacitor-android').exists()) {
+    include ':capacitor-android'
+    project(':capacitor-android').projectDir = new File(rootDir, 'capacitor-android')
+
+    include ':capacitor-preferences'
+    project(':capacitor-preferences').projectDir = new File(rootDir, 'capacitor-preferences')
+
+    include ':capacitor-filesystem'
+    project(':capacitor-filesystem').projectDir = new File(rootDir, 'capacitor-filesystem')
+} else if (new File(rootDir, 'capacitor.settings.gradle').exists()) {
+    apply from: 'capacitor.settings.gradle'
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Finance Tracker</title>
+    <meta name="description" content="An offline personal finance tracker with income and expense tracking, receivables and payables ledger, budgeting, and export." />
+    <meta property="og:title" content="Finance Tracker" />
+    <meta property="og:description" content="An offline personal finance tracker with income and expense tracking, receivables and payables ledger, budgeting, and export." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#059669" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Finance Tracker" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <script>
+      // Prevent stale development service workers from breaking the live iframe preview
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(regs) {
+          for (var r of regs) {
+            if (!location.protocol.startsWith('https') || location.port === '3000' || (r.active && r.active.scriptURL.includes('dev-sw'))) {
+              r.unregister();
+            }
+          }
+        }).catch(function() {});
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-D0AjiFSX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BGc8o6-0.css">
+  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
+
